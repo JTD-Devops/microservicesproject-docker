@@ -2,20 +2,16 @@ version: "3.9"
 
 services:
   devopsdb:
-    image: brkdockerhub/myjavarepo1:db
+    image: devikadockhub/mydockerproject:db
     ports:
       - "1234:3306"
-    deploy:
-      replicas: 3
     networks:
       - mynetwork
 
   application:
-    image: brkdockerhub/myjavarepo1:app
+    image: devikadockhub/mydockerproject:app
     ports:
       - "2222:8080"
-    deploy:
-      replicas: 3
     depends_on:
       - devopsdb
     networks:
@@ -23,4 +19,4 @@ services:
 
 networks:
   mynetwork:
-    driver: overlay
+    driver: bridge
