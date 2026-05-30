@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  devopsdb:
+    image: brkdockerhub/myjavarepo1:db
+    ports:
+      - "1234:3306"
+    deploy:
+      replicas: 3
+    networks:
+      - mynetwork
+
+  application:
+    image: brkdockerhub/myjavarepo1:app
+    ports:
+      - "2222:8080"
+    deploy:
+      replicas: 3
+    depends_on:
+      - devopsdb
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    driver: overlay
