@@ -26,27 +26,27 @@ Git Push → SonarQube → Nexus → Docker Build → Trivy Scan → Deploy → 
 
 ### Jenkins Pipeline
 
-![Jenkinspipeline-1](screenshots/Jenkinspipeline-1.png)
-![Jenkinspipeline-2](screenshots/Jenkinspipeline-2.png)
+![Jenkinspipeline-1](Jenkinspipeline-1.png)
+![Jenkinspipeline-2](Jenkinspipeline-2.png)
 
 ### SonarQube Quality Gate
 
-![Sonarqube](screenshots/Sonarqube.png)
+![Sonarqube](Sonarqube.png)
 
 ### Nexus Artifact Storage
 
-![Nexus](screenshots/Nexus.png)
+![Nexus](Nexus.png)
 
 ### Application Pages
 
-![LoginPage](screenshots/LoginPage.png)
-![Signuppage](screenshots/Signuppage.png)
-![Profilesetup](screenshots/Profilesetup.png)
-![Profilefeed](screenshots/Profilefeed.png)
+![LoginPage](LoginPage.png)
+![Signuppage](Signuppage.png)
+![Profilesetup](Profilesetup.png)
+![Profilefeed](Profilefeed.png)
 
 ### Post Build Notification
 
-![Postbuildactions](screenshots/Postbuildactions.png)
+![Postbuildactions](Postbuildactions.png)
 
 ---
 
@@ -252,13 +252,22 @@ The deployed application is a full-stack social profile platform with the follow
 
 ```
 microservicesproject-docker/
-├── Docker-app/          # App Dockerfile + WAR
-├── Docker-db/           # DB Dockerfile + init scripts
-├── compose.yml          # Docker Stack compose file
-├── pom.xml              # Maven build config
-├── Jenkinsfile          # Declarative pipeline definition
-├── screenshots/         # Project snapshot images
-└── src/                 # Application source code
+├── Docker-app/             # App Dockerfile + WAR
+├── Docker-db/              # DB Dockerfile + init scripts
+├── compose.yml             # Docker Stack compose file
+├── pom.xml                 # Maven build config
+├── Jenkinsfile             # Declarative pipeline definition
+├── Jenkinspipeline-1.png   # Screenshot — Jenkins pipeline stage 1
+├── Jenkinspipeline-2.png   # Screenshot — Jenkins pipeline stage 2
+├── LoginPage.png           # Screenshot — App login page
+├── Nexus.png               # Screenshot — Nexus artifact storage
+├── Postbuildactions.png    # Screenshot — Post build email notification
+├── Profilefeed.png         # Screenshot — App social feed
+├── Profilesetup.png        # Screenshot — App profile setup
+├── Signuppage.png          # Screenshot — App signup page
+├── Sonarqube.png           # Screenshot — SonarQube quality gate
+├── README.md
+└── src/                    # Application source code
 ```
 
 ---
